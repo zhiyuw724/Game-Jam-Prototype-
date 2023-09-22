@@ -5,8 +5,8 @@ using UnityEngine;
 public class moveFishSlow : MonoBehaviour
 {
     public float speed = 2.5f;
-    public float rightBorder = 4.0f; 
-    public float leftBorder = -4.0f;
+    private float rightBorder = 18.0f;
+    private float leftBorder = -18.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +19,13 @@ public class moveFishSlow : MonoBehaviour
         transform.Translate(Vector3.left * Time.deltaTime * speed);
         if (transform.position.x >= rightBorder)
         {
+            
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+          
+        }
+        else if (transform.position.x <= leftBorder)
+        {
             transform.rotation = Quaternion.Euler(0, 0, 180);
         }
-        // else if (transform.position.x == leftBorder)
-        // {
-        //     transform.rotation = Quaternion.Euler(0, 0, 0);
-        // }
     }
 }
