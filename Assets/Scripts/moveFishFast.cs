@@ -27,5 +27,23 @@ public class moveFishFast : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 0, 180);
         }
+
+          if (Input.GetMouseButtonDown(0))
+        {
+            // Convert mouse click position to world position
+            Vector3 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Debug.Log("fish: Mouse clicked at" + clickPosition);
+
+            // Perform a raycast from the mouse click position
+            RaycastHit2D hit = Physics2D.Raycast(clickPosition, Vector2.zero);
+
+            // Check if the raycast hits this fish
+            if (hit.collider != null)
+            {
+                Debug.Log("fish: Raycast Hit: " + hit.collider.gameObject.name);
+                // If the fish is clicked, make it invisible
+                hit.collider.gameObject.SetActive(false);
+            }
+        }
     }
 }
