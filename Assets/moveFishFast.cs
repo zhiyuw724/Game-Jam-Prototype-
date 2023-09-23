@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class moveFishGolden : MonoBehaviour
+public class moveFishFast : MonoBehaviour
 {
-    public float speed = 20f;
+    public float speed = 7f;
     private float rightBorder = 18.0f;
     private float leftBorder = -18.0f;
     // Start is called before the first frame update
