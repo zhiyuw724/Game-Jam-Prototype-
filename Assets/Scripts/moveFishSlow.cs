@@ -7,10 +7,12 @@ public class moveFishSlow : MonoBehaviour
     public float speed = 2.5f;
     private float rightBorder = 18.0f;
     private float leftBorder = -18.0f;
+    private heatLevel heatLevelScript;
 
     // Start is called before the first frame update
     void Start()
     {
+        heatLevelScript = FindObjectOfType<heatLevel>();
     }
 
     // Update is called once per frame
@@ -28,11 +30,11 @@ public class moveFishSlow : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 180);
         }
 
-      if (Input.GetMouseButtonDown(0))
+      if (Input.GetMouseButtonDown(0) && heatLevelScript != null && heatLevelScript.currentHeatLevel >= 10)
         {
-            // Convert mouse click position to world position
             Vector3 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log("fish: Mouse clicked at" + clickPosition);
+            if(clickPosition.y >=0.40 && clickPosition.y <= 6.00){
+            Debug.Log("fish slow: Mouse clicked at" + clickPosition);
 
             // Perform a raycast from the mouse click position
             RaycastHit2D hit = Physics2D.Raycast(clickPosition, Vector2.zero);
@@ -40,10 +42,11 @@ public class moveFishSlow : MonoBehaviour
             // Check if the raycast hits this fish
             if (hit.collider != null)
             {
-                Debug.Log("fish: Raycast Hit: " + hit.collider.gameObject.name);
+                Debug.Log("fish slow: Raycast Hit: " + hit.collider.gameObject.name);
                 // If the fish is clicked, make it invisible
                 hit.collider.gameObject.SetActive(false);
             }
+        }
         }
     }
 }

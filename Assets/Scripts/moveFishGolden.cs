@@ -7,10 +7,11 @@ public class moveFishGolden : MonoBehaviour
     public float speed = 20f;
     private float rightBorder = 18.0f;
     private float leftBorder = -18.0f;
+    private heatLevel heatLevelScript;
     // Start is called before the first frame update
     void Start()
     {
-        
+       // heatLevelScript = FindObjectOfType<heatLevel>();
     }
 
     // Update is called once per frame
@@ -28,22 +29,23 @@ public class moveFishGolden : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 180);
         }
 
-          if (Input.GetMouseButtonDown(0))
+          if (Input.GetMouseButtonDown(0) && heatLevelScript != null && heatLevelScript.currentHeatLevel >= 100)
         {
             // Convert mouse click position to world position
             Vector3 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log("fish: Mouse clicked at" + clickPosition);
-
+            if(clickPosition.y < -5.10){
+            Debug.Log("fish golden: Mouse clicked at" + clickPosition);
             // Perform a raycast from the mouse click position
             RaycastHit2D hit = Physics2D.Raycast(clickPosition, Vector2.zero);
 
             // Check if the raycast hits this fish
             if (hit.collider != null)
             {
-                Debug.Log("fish: Raycast Hit: " + hit.collider.gameObject.name);
+                Debug.Log("fish golden: Raycast Hit: " + hit.collider.gameObject.name);
                 // If the fish is clicked, make it invisible
                 hit.collider.gameObject.SetActive(false);
             }
+         }
         }
     }
 }
