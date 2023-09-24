@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class moveFishSlow : MonoBehaviour
+public class moveFishSlow3 : MonoBehaviour
 {
     public float speed = 2.5f;
     private float rightBorder = 18.0f;
     private float leftBorder = -18.0f;
     public heatLevel heatLevelScript;
+    // public static bool fishWasHitThisFrame = false;
+    // public static List<moveFishSlow> ProcessedFishes = new List<moveFishSlow>();
 
 
     // Start is called before the first frame update
@@ -52,7 +54,6 @@ public class moveFishSlow : MonoBehaviour
                 heatLevelScript.IncreaseHeat();
               
             } 
-
         }
         }
 

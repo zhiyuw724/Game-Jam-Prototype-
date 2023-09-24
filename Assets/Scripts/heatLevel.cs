@@ -19,4 +19,22 @@ public class heatLevel : MonoBehaviour
     {
         textMeshPro.text = "Heat Level: " + currentHeatLevel;
     }
+
+    public void IncreaseHeat()
+    {
+        currentHeatLevel += 15;
+    }
+    public void IncreaseHeatSecondLevel()
+    {
+        currentHeatLevel += 25;
+    }
+
+    public void DecreaseHeat()
+    {
+        currentHeatLevel -= 5;
+    }
+    public void MissedClick()
+{
+    DecreaseHeat();
+}
 }

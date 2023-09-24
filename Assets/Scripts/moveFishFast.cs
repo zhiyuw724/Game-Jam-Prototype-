@@ -7,7 +7,8 @@ public class moveFishFast : MonoBehaviour
     public float speed = 7f;
     private float rightBorder = 18.0f;
     private float leftBorder = -18.0f;
-    private heatLevel heatLevelScript;
+    public heatLevel heatLevelScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +44,7 @@ public class moveFishFast : MonoBehaviour
                 Debug.Log("fish fast: Raycast Hit: " + hit.collider.gameObject.name);
                 // If the fish is clicked, make it invisible
                 hit.collider.gameObject.SetActive(false);
+                heatLevelScript.IncreaseHeatSecondLevel();
             }
         }
         }

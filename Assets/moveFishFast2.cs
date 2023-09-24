@@ -1,16 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class moveFishSlow : MonoBehaviour
+public class moveFishFast2 : MonoBehaviour
 {
-    public float speed = 2.5f;
+    public float speed = 7f;
     private float rightBorder = 18.0f;
     private float leftBorder = -18.0f;
     public heatLevel heatLevelScript;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +17,6 @@ public class moveFishSlow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // fishWasHitThisFrame = false;
         transform.Translate(Vector3.left * Time.deltaTime * speed);
         if (transform.position.x >= rightBorder)
         {
@@ -33,28 +29,23 @@ public class moveFishSlow : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 180);
         }
 
-      if (Input.GetMouseButtonDown(0) && heatLevelScript != null && heatLevelScript.currentHeatLevel >= 10)
+          if (Input.GetMouseButtonDown(0) && heatLevelScript != null && heatLevelScript.currentHeatLevel >= 60)
         {
-            // heatLevelScript.DecreaseHeat();
             Vector3 clickPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if(clickPosition.y >=0.40 && clickPosition.y <= 6.00){
-            Debug.Log("fish slow: Mouse clicked at" + clickPosition);
-
+            if(clickPosition.y < 0.40 && clickPosition.y >= - 5.10 ){
+            Debug.Log("fish fast: Mouse clicked at" + clickPosition);
             // Perform a raycast from the mouse click position
             RaycastHit2D hit = Physics2D.Raycast(clickPosition, Vector2.zero);
 
             // Check if the raycast hits this fish
-            if (hit.collider != null && hit.collider.gameObject == this.gameObject)
+            if (hit.collider != null)
             {
-                Debug.Log("fish slow: Raycast Hit: " + hit.collider.gameObject.name);
+                Debug.Log("fish fast: Raycast Hit: " + hit.collider.gameObject.name);
                 // If the fish is clicked, make it invisible
                 hit.collider.gameObject.SetActive(false);
-                heatLevelScript.IncreaseHeat();
-              
-            } 
-
+                heatLevelScript.IncreaseHeatSecondLevel();
+            }
         }
         }
-
     }
 }

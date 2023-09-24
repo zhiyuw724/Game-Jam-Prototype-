@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class moveFishSlow : MonoBehaviour
+public class moveFishSlow2 : MonoBehaviour
 {
     public float speed = 2.5f;
     private float rightBorder = 18.0f;
@@ -50,9 +50,9 @@ public class moveFishSlow : MonoBehaviour
                 // If the fish is clicked, make it invisible
                 hit.collider.gameObject.SetActive(false);
                 heatLevelScript.IncreaseHeat();
+                // fishWasHitThisFrame = true;
               
             } 
-
         }
         }
 

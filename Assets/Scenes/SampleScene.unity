@@ -133,8 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9066287}
   - component: {fileID: 9066286}
-  - component: {fileID: 9066288}
   - component: {fileID: 9066289}
+  - component: {fileID: 9066290}
   m_Layer: 0
   m_Name: Fish-f
   m_TagString: Untagged
@@ -209,19 +209,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9066288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9066285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9cb6ad435c944776a77e2be2681ddc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
 --- !u!61 &9066289
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -248,6 +235,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6}
   m_EdgeRadius: 0
+--- !u!114 &9066290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9066285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0acd6fbc0d2ec44b7bea9f20d8039b3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
+  heatLevelScript: {fileID: 1057508208}
 --- !u!1 &76550940
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,6 +553,7 @@ GameObject:
   - component: {fileID: 270432560}
   - component: {fileID: 270432559}
   - component: {fileID: 270432558}
+  - component: {fileID: 270432561}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -609,6 +611,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &270432561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270432557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
 --- !u!1 &319633422
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,6 +643,7 @@ GameObject:
   - component: {fileID: 319633424}
   - component: {fileID: 319633423}
   - component: {fileID: 319633426}
+  - component: {fileID: 319633427}
   m_Layer: 0
   m_Name: Fish-s
   m_TagString: Untagged
@@ -641,6 +664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  heatLevelScript: {fileID: 0}
 --- !u!212 &319633424
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -734,6 +758,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6}
   m_EdgeRadius: 0
+--- !u!114 &319633427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319633422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54607eccee7534201bdb62fa1553575a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2.5
+  heatLevelScript: {fileID: 1057508208}
 --- !u!1 &399322221
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,8 +1033,8 @@ GameObject:
   m_Component:
   - component: {fileID: 727589735}
   - component: {fileID: 727589734}
-  - component: {fileID: 727589736}
   - component: {fileID: 727589737}
+  - component: {fileID: 727589738}
   m_Layer: 0
   m_Name: Fish-s
   m_TagString: Untagged
@@ -1071,19 +1109,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &727589736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727589733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70946724dd2614100b146b5880f12f78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
 --- !u!61 &727589737
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1110,6 +1135,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6}
   m_EdgeRadius: 0
+--- !u!114 &727589738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727589733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed11d3f6aba054f66a9b452afe2d9333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2.5
+  heatLevelScript: {fileID: 1057508208}
 --- !u!1 &833446668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,9 +1415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a357d4b4f336a434ba75dae879f9d039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabbableLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!61 &868967957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1441,7 +1477,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: 200}
+  m_AnchoredPosition: {x: -282.6, y: 213.3}
   m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1057508208
@@ -1654,6 +1690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+  heatLevelScript: {fileID: 1057508208}
 --- !u!61 &1105996837
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1858,8 +1895,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1163976548}
   - component: {fileID: 1163976547}
-  - component: {fileID: 1163976549}
   - component: {fileID: 1163976550}
+  - component: {fileID: 1163976551}
   m_Layer: 0
   m_Name: Fish-f
   m_TagString: Untagged
@@ -1934,19 +1971,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!114 &1163976549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163976546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9cb6ad435c944776a77e2be2681ddc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
 --- !u!61 &1163976550
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1973,6 +1997,65 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6}
   m_EdgeRadius: 0
+--- !u!114 &1163976551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163976546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327169195171c4a538b1247054232852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
+  heatLevelScript: {fileID: 1057508208}
+--- !u!1 &1178264990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1178264992}
+  - component: {fileID: 1178264991}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1178264991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178264990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3ef73a6a55a4e2b8cf07e291c55dce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heatManager: {fileID: 1057508208}
+--- !u!4 &1178264992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178264990}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.510075, y: 8.2914715, z: -5.8542643}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1219221174
 GameObject:
   m_ObjectHideFlags: 0
@@ -2072,6 +2155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  heatLevelScript: {fileID: 1057508208}
 --- !u!61 &1219221178
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2254,7 +2338,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 372, y: 210}
+  m_AnchoredPosition: {x: 315, y: 207.9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1680200586
@@ -2533,8 +2617,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1753641637}
   - component: {fileID: 1753641636}
-  - component: {fileID: 1753641638}
   - component: {fileID: 1753641639}
+  - component: {fileID: 1753641640}
   m_Layer: 0
   m_Name: Fish-s
   m_TagString: Untagged
@@ -2609,19 +2693,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!114 &1753641638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1753641635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70946724dd2614100b146b5880f12f78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
 --- !u!61 &1753641639
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2648,6 +2719,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6}
   m_EdgeRadius: 0
+--- !u!114 &1753641640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753641635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28466540c84eb455ba2ce5325fcbcbc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2.5
+  heatLevelScript: {fileID: 1057508208}
 --- !u!1 &1853353518
 GameObject:
   m_ObjectHideFlags: 0
@@ -2961,8 +3046,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2113450618}
   - component: {fileID: 2113450617}
-  - component: {fileID: 2113450619}
   - component: {fileID: 2113450620}
+  - component: {fileID: 2113450621}
   m_Layer: 0
   m_Name: Fish-f
   m_TagString: Untagged
@@ -3037,19 +3122,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2113450619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113450616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9cb6ad435c944776a77e2be2681ddc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
 --- !u!61 &2113450620
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3076,6 +3148,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6, y: 1.6}
   m_EdgeRadius: 0
+--- !u!114 &2113450621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113450616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162bf1530ae384821b994f7ac547b5c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
+  heatLevelScript: {fileID: 1057508208}
 --- !u!1 &2124574546
 GameObject:
   m_ObjectHideFlags: 0
