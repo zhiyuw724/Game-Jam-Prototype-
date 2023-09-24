@@ -1327,7 +1327,6 @@ GameObject:
   m_Component:
   - component: {fileID: 868967954}
   - component: {fileID: 868967955}
-  - component: {fileID: 868967956}
   - component: {fileID: 868967957}
   m_Layer: 0
   m_Name: FishingRod
@@ -1403,18 +1402,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &868967956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 868967953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a357d4b4f336a434ba75dae879f9d039, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &868967957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1477,8 +1464,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -282.6, y: 213.3}
-  m_SizeDelta: {x: 150, y: 50}
+  m_AnchoredPosition: {x: -300, y: 190}
+  m_SizeDelta: {x: 250, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1057508208
 MonoBehaviour:
@@ -1494,6 +1481,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 0}
   currentHeatLevel: 50
+  goldenFish: {fileID: 76550940}
+  speed: 20
+  freezeSpeed: 0
 --- !u!114 &1057508209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1541,8 +1531,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2338,7 +2328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 315, y: 207.9}
+  m_AnchoredPosition: {x: 315, y: 201}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1680200586
