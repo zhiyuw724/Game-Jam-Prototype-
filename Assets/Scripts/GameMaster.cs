@@ -7,7 +7,7 @@ public class GameMaster : MonoBehaviour
 {
     public bool runningTimer;
     public float currentTime;
-    public float maxTime = 10;
+    public float maxTime = 15;
     public TMPro.TextMeshProUGUI Text;
     public TMPro.TextMeshProUGUI GameOverText;
     // Start is called before the first frame update

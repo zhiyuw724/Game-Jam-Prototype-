@@ -921,7 +921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runningTimer: 0
   currentTime: 0
-  maxTime: 10
+  maxTime: 15
   Text: {fileID: 1680200586}
   GameOverText: {fileID: 1886679889}
 --- !u!4 &572986892
@@ -2351,7 +2351,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Time: 10'
+  m_text: 'Time: 15'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
