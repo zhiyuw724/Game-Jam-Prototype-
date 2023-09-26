@@ -12,7 +12,7 @@ public class heatLevel : MonoBehaviour
 
     public GameObject goldenFish;
     private bool isFrozen = false;
-    private float freezeDuration = 2.0f;
+    private float freezeDuration = 0.8f;
     private float freezeTimer = 0.0f;
     public float speed = 20f;
     public float freezeSpeed = 0.0f;
