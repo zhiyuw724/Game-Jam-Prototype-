@@ -32,7 +32,7 @@ public class heatLevel : MonoBehaviour
         textMeshPro.text = "Heat Level: " + currentHeatLevel;
 
 
-        if (Input.GetKeyDown(KeyCode.F) && currentHeatLevel >= 200 && !isFrozen)
+        if (Input.GetKeyDown(KeyCode.F) && currentHeatLevel >= 150 && !isFrozen)
         {
             FreezeFish();
             Debug.Log("Hello");
@@ -60,7 +60,7 @@ public class heatLevel : MonoBehaviour
             // goldenFish.GetComponent<FishMovementScript>().enabled = false;
             isFrozen = true;
             freezeTimer = 0.0f; // Reset the freeze timer
-            currentHeatLevel -= 100; // Decrease the heat level by 100
+            currentHeatLevel -= 20; // Decrease the heat level by 20
             if (fishMovementScript != null)
             {
                 fishMovementScript.speed = 0.0f;

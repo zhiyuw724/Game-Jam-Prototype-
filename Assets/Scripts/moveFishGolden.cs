@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class moveFishGolden : MonoBehaviour
 {
-    public float speed = 20f;
+    public float speed = 2f;
     private float rightBorder = 18.0f;
     private float leftBorder = -18.0f;
     private heatLevel heatLevelScript;
     // Start is called before the first frame update
     void Start()
     {
-       // heatLevelScript = FindObjectOfType<heatLevel>();
+        heatLevelScript = FindObjectOfType<heatLevel>();
     }
 
     // Update is called once per frame
